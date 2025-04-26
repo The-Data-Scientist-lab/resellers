@@ -199,63 +199,6 @@ const PaymentVerificationFailed = () => {
                   ))}
                 </div>
               </motion.div>
-
-              {/* Tips */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="bg-white/80 p-6 rounded-2xl border border-blue-100 shadow-lg"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <motion.div
-                    animate={{
-                      rotate: [0, 360],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white"
-                  >
-                    <HelpCircle className="w-5 h-5" />
-                  </motion.div>
-                  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Important Tips</h3>
-                </div>
-                <ul className="space-y-3 text-gray-600">
-                  {[
-                    "Ensure the screenshot is clear and not blurry",
-                    "Include the complete transaction details",
-                    "Make sure the payment amount is visible"
-                  ].map((tip, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.8 + index * 0.1 }}
-                      className="flex items-start gap-2 group"
-                    >
-                      <motion.span
-                        animate={{
-                          scale: [1, 1.2, 1],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                        className={`p-1 rounded-full bg-gradient-to-br ${
-                          index === 0 ? "from-blue-500 to-blue-600" :
-                          index === 1 ? "from-blue-600 to-blue-700" :
-                          "from-blue-700 to-blue-800"
-                        } text-white text-xs group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        •
-                      </motion.span>
-                      <span className="group-hover:text-gray-900 transition-colors duration-300">{tip}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
             </motion.div>
 
             {/* Right Column - Actions */}
