@@ -21,7 +21,8 @@ const HEADERS = [
   'Status',
   'Form Type',
   'Browser Info',
-  'Device Type'
+  'Device Type',
+  'App URL'
 ];
 
 function getTimeOfDay(hour) {
@@ -99,7 +100,8 @@ function doPost(e) {
       data.status,
       data.type,
       data.browserInfo,
-      data.deviceType
+      data.deviceType,
+      'https://script.google.com/macros/s/AKfycbz--h3KJrYzdibaXAUVvPBIX4H8XbcljQGTvZ0kFvS6Sv9MRHlqhhWzhBR8noC1yMfy/exec'
     ];
     
     // Add new row to the next available row
