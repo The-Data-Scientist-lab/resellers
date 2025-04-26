@@ -18,18 +18,12 @@ const HeroSection = () => {
             Get instant access to high-quality nude videos at a fraction of the original cost. 
             Official reseller with thousands of satisfied customers.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center">
             <Link 
               to="/models" 
-              className="bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition-colors"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg px-8 py-3 transition-colors"
             >
-              Browse Videos
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg px-6 py-3 transition-colors"
-            >
-              View Pricing
+              View Models
             </Link>
           </div>
         </div>
