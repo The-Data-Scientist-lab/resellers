@@ -8,20 +8,26 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Modern background pattern */}
+      <div className="fixed inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
       
-      <header className="relative z-10">
-        <Header />
-      </header>
-      
-      <main className="flex-grow relative z-10">
-        {children}
-      </main>
-      
-      <footer className="relative z-10">
-        <Footer />
-      </footer>
+      {/* Content wrapper with glass effect */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200">
+          <Header />
+        </header>
+        
+        <main className="flex-grow">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {children}
+          </div>
+        </main>
+        
+        <footer className="mt-auto">
+          <Footer />
+        </footer>
+      </div>
     </div>
   );
 };

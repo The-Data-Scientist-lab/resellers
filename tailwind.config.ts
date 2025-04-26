@@ -52,22 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
 				model: {
-					primary: '#6366f1',
-					secondary: '#8b5cf6',
+					primary: '#4f46e5',
+					secondary: '#7c3aed',
 					dark: '#0f172a',
 					light: '#f8fafc',
-					accent: '#c084fc'
+					accent: '#9333ea'
 				}
 			},
 			borderRadius: {
@@ -75,6 +65,19 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			boxShadow: {
+				'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+				'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+				'button': '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+				'button-hover': '0 6px 8px -1px rgba(0, 0, 0, 0.15)'
+			},
+			animation: {
+				'spin-slow': 'spin 3s linear infinite',
+				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			},
+			transitionTimingFunction: {
+				'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
+			}
 		}
 	},
 	plugins: [],

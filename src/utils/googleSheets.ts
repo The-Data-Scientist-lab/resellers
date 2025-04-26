@@ -44,7 +44,7 @@ interface ApiResponse {
 }
 
 // Your Google Apps Script web app URL
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRtRAmvAe2jw83QwWkPWGocx2uPgjfnFNNWs30-VISXEULWrRent7dmnOcnlL-7BM6iQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz--h3KJrYzdibaXAUVvPBIX4H8XbcljQGTvZ0kFvS6Sv9MRHlqhhWzhBR8noC1yMfy/exec';
 
 const getLocationData = async (ip: string): Promise<LocationData> => {
   try {

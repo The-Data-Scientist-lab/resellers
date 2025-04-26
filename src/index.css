@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 226 100% 98%;
-    --foreground: 224 71% 4%;
+    --background: 240 10% 98%;
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
-    --primary: 250 95% 64%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 9% 46%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
-    --accent: 267 100% 76%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84% 60%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 248 96% 77%;
-    --radius: 1rem;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.75rem;
   }
 
   * {
@@ -31,85 +31,81 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold tracking-tight;
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-foreground/80;
   }
 }
 
 .gradient-overlay {
-  background: linear-gradient(to top, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0) 50%);
+  background: linear-gradient(to top, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0) 70%);
 }
 
 .pricing-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.3);
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-xl;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .model-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .model-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
   }
 }
 
 .payment-card {
-  @apply bg-gradient-to-br from-white to-secondary shadow-xl border border-secondary/20;
+  @apply bg-gradient-to-br from-white to-secondary shadow-2xl border border-secondary/20;
+  backdrop-filter: blur(10px);
 }
 
 .verification-progress {
-  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500;
-}
-
-.pricing-card {
-  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600;
 }
 
 .glass-card {
-  @apply bg-white/90 backdrop-blur-sm shadow-xl border border-white/20 rounded-xl;
+  @apply bg-white/95 backdrop-blur-md shadow-2xl border border-white/20 rounded-xl;
+  backdrop-filter: blur(10px);
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600 bg-clip-text text-transparent font-bold;
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
 }
 
 .shiny-button {
-  background: linear-gradient(90deg, #6366f1, #8b5cf6, #c084fc, #8b5cf6, #6366f1);
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #9333ea, #7c3aed, #4f46e5);
   background-size: 200% 100%;
   animation: shine 8s linear infinite;
-  @apply text-white font-medium px-6 py-3 rounded-full transition-transform hover:scale-[1.03] hover:shadow-lg;
+  @apply text-white font-semibold px-6 py-3 rounded-full transition-all hover:scale-[1.03] hover:shadow-xl;
 }
 
 .card-gradient {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%);
 }
 
 .payment-step-card {
-  @apply bg-white rounded-xl border border-border shadow-md p-6 transition-all hover:shadow-lg;
+  @apply bg-white rounded-xl border border-border shadow-lg p-6 transition-all hover:shadow-xl;
 }
 
 .payment-progress {
-  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 h-2 rounded-full transition-all;
+  @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600 h-2 rounded-full transition-all;
 }
 
 .animated-pulse {
@@ -126,16 +122,15 @@
 }
 
 .success-glow {
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
 }
 
-/* Enhanced text visibility */
 .text-shadow {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contrast-text {
-  @apply text-gray-900;
+  @apply text-gray-900 font-medium;
 }
 
 .contrast-text-light {
@@ -146,12 +141,49 @@
   @apply text-gray-500;
 }
 
-/* Improved button visibility */
 .button-shadow {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Enhanced card visibility */
 .card-shadow {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* New Modern Design Elements */
+.modern-card {
+  @apply rounded-xl border border-gray-200 bg-white shadow-lg transition-all duration-300 hover:shadow-xl;
+  backdrop-filter: blur(10px);
+}
+
+.modern-button {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+  background: linear-gradient(145deg, #4f46e5, #7c3aed);
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
+}
+
+.modern-input {
+  @apply rounded-lg border border-gray-200 bg-white px-4 py-2.5 transition-all duration-300;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.modern-input:focus {
+  @apply border-indigo-500 ring-2 ring-indigo-200;
+  outline: none;
+}
+
+.modern-section {
+  @apply py-16 md:py-24;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+}
+
+.modern-heading {
+  @apply text-4xl md:text-5xl font-bold tracking-tight text-center mb-8;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
