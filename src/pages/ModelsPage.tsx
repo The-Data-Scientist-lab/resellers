@@ -10,11 +10,9 @@ const ModelsPage = () => {
     <div className="bg-background min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold contrast-text mb-4 text-shadow">
-            Our <span className="text-model-primary">Premium</span> Models
-          </h1>
-          <p className="text-lg contrast-text-light">
-            Discover our carefully selected professional models with high-quality content and multiple pricing options
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Models</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Get premium model content at affordable prices! We're official resellers offering the same high-quality Nude videos at a fraction of the original cost
           </p>
         </div>
         

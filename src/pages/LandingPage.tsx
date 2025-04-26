@@ -14,10 +14,10 @@ const LandingPage: React.FC = () => {
             <span className="text-green-600 font-semibold">Trusted Reseller Since 2021</span>
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Premium Model Showcase Platform
+            Get Premium Model Content at Affordable Prices
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're making premium model content accessible to everyone at affordable prices. While original content costs ₹16,000+ per video, we offer the same high-quality content at a fraction of the price.
+            We're official resellers offering the same high-quality Nude videos at a fraction of the original cost. Get instant access to premium content at unbeatable prices.
           </p>
           <div className="flex justify-center gap-4">
             <Link to="/models">

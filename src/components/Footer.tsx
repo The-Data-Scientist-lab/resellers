@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Model<span className="text-model-primary">Showcase</span></h3>
             <p className="text-gray-600 mb-4">
-              Premium model showcase platform featuring professional models with high-quality content and multiple pricing options.
+              Get premium model content at affordable prices! We're official resellers offering the same high-quality Nude videos at a fraction of the original cost
             </p>
           </div>
           
